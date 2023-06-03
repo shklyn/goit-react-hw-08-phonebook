@@ -1,7 +1,13 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize;
+/* bring in normalize.css styles */
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  padding: 10vh;
+  height: auto;
+  color: #ffffff;
+  background-color: #00ff8e;
+  font-family: 'Asap', sans-serif;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -12,4 +18,62 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1,
+h2 {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 54px;
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+header {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 64px;
+  min-width: 320px;
+  max-width: 760px;
+  min-height: 60px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 52px;
+
+  z-index: 1;
+  background: #1182ff;
+}
+
+.hero-title {
+  color: #fff;
 }
