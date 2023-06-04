@@ -3,19 +3,20 @@ import { ContactsList } from '../components/ContactList/ContactList';
 import { Filter } from '../components/Filter/Filter';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-
-import { selectContacts } from 'redux/selectors';
+import { selectContactsArr, selectIsLoading, selectError } from 'redux/selectors';
 import { fetchContacts } from 'redux/operations';
 
 export default function Contacts() {
   const dispatch = useDispatch();
 
-  const { contactsArr, isLoading, error } = useSelector(selectContacts);
+  const contactsArr = useSelector(selectContactsArr);
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
+
 
   useEffect(() => {
     dispatch(fetchContacts());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="container">
